@@ -1,0 +1,328 @@
+/*Подключение внешнего шрифта*/
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), url("../fonts/roboto.woff2") format("woff2"),
+    url("../fonts/roboto.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), url("../fonts/robotobold.woff2") format("woff2"),
+    url("../fonts/robotobold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"),
+    url("../fonts/robotomedium.woff2") format("woff2"),
+    url("../fonts/robotomedium.woff") format("woff");
+}
+/*Цвета*/
+:root {
+  --basic-black: #000000;
+  --basic-black-extra: #283136;
+  --basic-black-social: #444444;
+  --basic-grey: #eeeeee;
+  --basic-grey-active: #d5d5d5;
+  --basic-grey-border: #eeeeee;
+  --basic-grey-check: #4d4d4d;
+  --basic-grey-hover: #dfdfdf;
+  --basic-grey-input: #d7dcde;
+  --basci-grey-input-hover: #b4b9bb;
+  --basic-grey-social: #e1e1e1;
+  --basic-grey-telephone: #666666;
+  --basic-red: #fb565a;
+  --basic-red-active: #d7373b;
+  --basic-red-hover: #e74246;
+  --basic-green: #00ca74;
+  --basic-green-active: #00aa62;
+  --basic-green-hover: #00bc6c;
+  --basic-white: #ffffff;
+  --basic-yellow: #efc849;
+  --basic-yellow-active: #e5a722;
+  --basic-yellow-hover: #eab534;
+}
+/*"Глобальные" классы*/
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+a {
+  text-decoration: none;
+}
+/*Стили списков*/
+.advantages ul,
+.credo ul,
+.features ul,
+nav ul,
+.social-networks ul,
+.partners ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+/*Стили кнопок*/
+.button {
+  border: none;
+  border-radius: 3px;
+  display: block;
+  font-family: "Roboto Medium", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.button-advantage {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+  width: 240px;
+}
+.button-advantage:hover,
+.button-feature-websites:hover,
+.button-mail:hover,
+.button-send:hover {
+  background-color: var(--basic-red-hover);
+}
+.button-advantage:active,
+.button-feature-websites:active,
+.button-mail:active,
+.button-send:active {
+  background-color: var(--basic-red-active);
+}
+.button-feature {
+  color: var(--basic-white);
+  width: 160px;
+}
+.button-feature-applications {
+  background-color: var(--basic-green);
+}
+.button-feature-applications:active {
+  background-color: var(--basic-green-active);
+}
+.button-feature-applications:focus,
+.button-feature-applications:hover {
+  background-color: var(--basic-green-hover);
+}
+.button-feature-presentations {
+  background-color: var(--basic-yellow);
+}
+.button-feature-presentations:active {
+  background-color: var(--basic-yellow-active);
+}
+.button-feature-presentations:focus,
+.button-feature-presentations:hover {
+  background-color: var(--basic-yellow-hover);
+}
+.button-feature-websites {
+  background-color: var(--basic-red);
+}
+.button-mail {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+  width: 219px;
+}
+.button-send {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+  width: 259px;
+}
+/*Начертания шрифта*/
+.font-bold {
+  font-family: "Roboto Bold", "Arial", sans-serif;
+  font-weight: 700;
+}
+.font-medium {
+  font-family: "Roboto Medium", "Arial", sans-serif;
+  font-weight: 500;
+}
+/*Сокрытие заголовков и иных элементов*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+/*Шапка сайта*/
+nav a {
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+nav a:active
+{
+  opacity: 0.3;
+}
+nav a:hover:not(.current){
+  color: var(--basic-red);
+}
+nav .current{
+  border-bottom: 2px solid var(--basic-red);
+}
+header,
+.advantages {
+  background: var(--basic-grey);
+}
+/*Тело сайта*/
+.main-body section:not(:first-child) {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+/*advantages*/
+.advantages h3 {
+  font-size: 55px;
+  line-height: 55px;
+}
+.advantages p {
+  color: var(--basic-black-extra);
+  line-height: 24px;
+}
+/*.features*/
+.features h3 {
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+/*.credo*/
+.credo {
+  border-top: 2px solid var(--basic-grey-border);
+}
+.credo h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.credo .pride {
+  font-size: 45px;
+  line-height: 45px;
+}
+.credo .description,
+.credo li {
+  color: var(--basic-black-extra);
+}
+/*.indicators*/
+.indicators h3 {
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.accents span {
+  font-size: 45px;
+  line-height: 64px;
+}
+.accents sup {
+  font-size: 26px;
+  line-height: 40px;
+  position: relative;
+  top: -9px;
+}
+.caption {
+  color: var(--basic-black-extra);
+  line-height: 18px;
+}
+/*Партнёры*/
+.partners {
+  border-top: 2px solid var(--basic-grey-border);
+  border-bottom: 2px solid var(--basic-grey-border);
+}
+.partners-item:not(:last-child) a {
+  border-right: 2px solid var(--basic-grey-border);
+}
+.partners img {
+  opacity: 0.3;
+}
+.partners img:active {
+  opacity: 0.1;
+}
+.partners img:focus,
+.partners img:hover {
+  opacity: 1;
+}
+/*Контактная информация (нижняя часть)*/
+.about-us {
+  width: 319px;
+  height: 308px;
+  background-color: var(--basic-white);
+}
+.about-us p {
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.about-us address,
+.about-us a {
+  color: var(--basic-grey-telephone);
+  font-style: inherit;
+  line-height: 18px;
+}
+/*Блок со скидкой*/
+.discount h2 {
+  font-size: 36px;
+  line-height: 36px;
+}
+.discount p {
+  line-height: 22px;
+  color: var(--basic-black-social);
+}
+/*Модальное окно*/
+.modal {
+  width: 960px;
+  height: 590px;
+  background-color: var(--basic-white);
+}
+.modal .close {
+  width: 21px;
+  height: 21px;
+  margin-right: 5px;
+}
+.modal input {
+  width: 360px;
+  height: 50px;
+  border: 2px solid var(--basic-grey-input);
+  box-sizing: border-box;
+  border-radius: 3px;
+  color: var(--basic-black-social);
+  line-height: 18px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.modal p {
+  font-size: 45px;
+  line-height: 52.73px;
+}
+.modal textarea {
+  width: 760px;
+  height: 118px;
+  border: 2px solid var(--basic-grey-input);
+  box-sizing: border-box;
+  border-radius: 3px;
+  color: var(--basic-black-social);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.modal input:focus,
+.modal textarea:focus {
+  border: 2px solid var(--basic-black);
+}
+.modal input:hover,
+.modal textarea:hover {
+  border: 2px solid var(--basic-grey-input-hover);
+}
+.modal input:invalid,
+.modal textarea:invalid {
+  border: 2px solid var(--basic-red-hover);
+}
