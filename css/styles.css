@@ -271,7 +271,7 @@ img {
 .credo-orders-item {
   color: var(--basic-black-extra);
 }
-/*relative у карточки, absolute у элемента списка*/
+
 /*Показатели*/
 .indicators-header {
   font-weight: 700;
@@ -311,7 +311,7 @@ img {
   list-style: none;
   padding: 0;
 }
-.partner-link {
+.partners-item:not(:last-child) .partner-link {
   border-right: 2px solid var(--basic-grey-border);
 }
 .partner-img {
@@ -390,11 +390,17 @@ img {
   padding: 0;
 }
 /*Шаблоны*/
+.template-img
+{
+  position: absolute;
+}
 .template-card {
   background-color: var(--basic-grey);
   height: 231px;
   width: 360px;
   opacity: 0;
+  position: relative;
+  top: 348px;
 }
 .template-card:hover {
   opacity: 1;
