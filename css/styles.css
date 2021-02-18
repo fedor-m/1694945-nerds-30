@@ -187,7 +187,7 @@ img {
 /*Стили для определённых частей страниц*/
 
 .container {
-  max-width: 1160px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -266,7 +266,7 @@ img {
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 360px);
+  grid-template-columns: repeat(3, 300px);
   gap: 100px;
   text-align: left;
 }
