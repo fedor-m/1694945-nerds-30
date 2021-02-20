@@ -391,8 +391,14 @@ img {
 
 /*Заголовок*/
 
+.catalog-main {
+  padding-top: 55px;
+}
+
 .catalog-header {
   background-color: var(--basic-grey);
+  padding-top: 78px;
+  padding-bottom: 105px;
 }
 
 .catalog-title {
@@ -404,11 +410,24 @@ img {
   text-align: center;
 }
 
-.filters-legend {
+.catalog-container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 48px 140px;
+  grid-template-rows: 48px;
+}
+
+.filter-legend {
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.filter-label {
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--basic-black-extra);
 }
 
 .filters-features, .filters-grids, .filters-prices {
@@ -433,10 +452,18 @@ img {
 
 /*Сортировки*/
 
+.catalog-sort {
+  display: grid;
+  grid-template-columns: 133px 296px 22px;
+  column-gap: 148px;
+}
+
 .sort-list {
-  margin: 0;
+  margin: 1px 0 0 117px;
   list-style: none;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 101px);
 }
 
 .sort-title {
@@ -444,6 +471,7 @@ img {
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .sort-type {
@@ -460,12 +488,29 @@ img {
 }
 
 .arrows-list {
-  margin: 0;
+  margin: 1px 0 0 0;
   list-style: none;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 11px);
+  column-gap: 29px;
 }
 
 /*Шаблоны*/
+
+.catalog-templates {
+  grid-column: 2 / -1;
+}
+
+.templates-list {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 358px);
+  gap: 30px 40px;
+  grid-template-rows: repeat(3, 578px);
+}
 
 .template-img {
   position: absolute;
@@ -477,7 +522,7 @@ img {
   width: 360px;
   opacity: 0;
   position: relative;
-  top: 348px;
+  top: 328px;
 }
 
 .template-card:hover {
@@ -502,18 +547,15 @@ img {
   text-transform: uppercase;
 }
 
-.templates-list {
-  margin: 0;
-  list-style: none;
-  padding: 0;
-}
-
 /*Страницы*/
 
 .pages-list {
   margin: 0;
   list-style: none;
-  padding: 0;
+  padding: 55px 0 60px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 50px) 1fr;
+  column-gap: 11px;
 }
 
 .page {
