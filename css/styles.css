@@ -769,6 +769,8 @@ img {
   gap: 12px;*/
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  width: 270px;
 }
 
 .social-icon {
