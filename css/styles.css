@@ -299,6 +299,12 @@ img {
   display: flex;
   justify-content: space-between;
   text-align: left;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .service-description {
@@ -404,13 +410,16 @@ img {
   display: flex;
   justify-content: space-between;
   text-align: left;
+  flex-wrap: wrap;
 }
+
+/*Эта часть кода будет заменена на декоративную графику
 
 .partners-item:not(:last-child) .partner-link {
   border-right: 2px solid var(--basic-grey-border);
   position: absolute;
   height: 52px;
-}
+}*/
 
 .partner-img {
   opacity: 0.3;
@@ -556,16 +565,26 @@ img {
   margin: 0;
   list-style: none;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 358px);
-  gap: 30px 40px;
-  grid-template-rows: repeat(3, 578px);
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 358px); */
+  /* gap: 30px 40px; */
+  /* grid-template-rows: repeat(3, 578px); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.template-item {
+  width: 359px;
+  height: 578px;
+  margin-top: 31px;
+  margin-bottom: 31px;
 }
 
 .template-img {
   position: absolute;
-  width: 359;
-  height: 578;
+  width: 359px;
+  height: 578px;
 }
 
 .template-card {
