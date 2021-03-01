@@ -342,7 +342,7 @@ img {
   position: relative;
 }
 
-.advantage-switcher:disabled::before {
+.advantage-switcher.chosen::before {
   content: "";
   position: absolute;
   left: 50%;
