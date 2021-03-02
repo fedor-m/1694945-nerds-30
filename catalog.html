@@ -37,7 +37,7 @@
         </ul>
         <ul class="navigation-user">
           <li>
-            <a class="site-link" href="#">Корзина</a>
+            <a class="site-link basket" href="#">Корзина</a>
           </li>
         </ul>
       </nav>
@@ -52,32 +52,56 @@
         <section class="catalog-filters">
           <h2 class="visually-hidden">Выбор шаблона</h2>
           <form class="filters-form" method="get" action="https://echo.htmlacademy.ru/">
-            <fieldset class="filters-prices">
+            <fieldset class="filters-price">
               <legend class="filter-legend">Стоимость:</legend>
-              <!--Slider-->
-              <div>
-                <label for="from">От</label>
-                <input type="number" min="0" max="15000" value="0" id="from" name="from" />
-              </div>
-              <div>
-                <label for="to">до</label>
-                <input type="number" min="0" max="15000" value="15000" id="to" name="to" />
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="
+                      width: 30%;
+                      margin-left: 20%
+                    "></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0" style="
+                    left: 20%
+                  "></div>
+                  <div class="toggle toggle-max" tabindex="0" style="
+                    left: 50%
+                  "></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    от <input type="number" name="min-price" value="0">
+                  </label>
+                  <label class="max-price">
+                    до <input type="number" name="max-price" value="15000">
+                  </label>
+                </div>
               </div>
             </fieldset>
-            <fieldset class="filters-grids">
+            <fieldset class="filters-grid">
               <legend class="filter-legend">Сетка:</legend>
               <ul class="grids-list">
                 <li>
-                  <input type="radio" name="grid" id="grid_adaptive" value="adaptive" />
-                  <label class="filter-label" for="grid_adaptive">Адаптивная</label>
+                  <label class="radio option">
+                    <input class="input-radio" type="radio" checked="checked" value="adaptive" name="grid">
+                    <span class="radiobutton"></span>
+                    <span class="label">Адаптивная</span>
+                  </label>
                 </li>
                 <li>
-                  <input type="radio" name="grid" id="grid_fixed" value="fixed" />
-                  <label class="filter-label" for="grid_fixed">Фиксированная</label>
+                  <label class="radio option">
+                    <input class="input-radio" type="radio" value="fixed" name="grid">
+                    <span class="radiobutton"></span>
+                    <span class="label">Фиксированная</span>
+                  </label>
                 </li>
                 <li>
-                  <input type="radio" name="grid" id="grid_fluid" value="fluid" />
-                  <label class="filter-label" for="grid_fluid">Резиновая</label>
+                  <label class="radio option">
+                    <input class="input-radio" type="radio" value="fluid" name="grid">
+                    <span class="radiobutton"></span>
+                    <span class="label">Резиновая</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -85,24 +109,39 @@
               <legend class="filter-legend">Особенности:</legend>
               <ul class="features-list">
                 <li>
-                  <input type="checkbox" name="feature_slider" id="feature_slider" />
-                  <label class="filter-label" for="feature_slider">Слайдер</label>
+                  <label class="check option">
+                    <input class="input-checkbox" type="checkbox" checked="checked" value="slider" name="features">
+                    <span class="checkbox"></span>
+                    <span class="label">Слайдер</span>
+                  </label>
                 </li>
                 <li>
-                  <input type="checkbox" name="feature_advantages" id="feature_advantages" />
-                  <label class="filter-label" for="feature_advantages">Преимущества</label>
+                  <label class="check option">
+                    <input class="input-checkbox" type="checkbox" value="advantages" name="features">
+                    <span class="checkbox"></span>
+                    <span class="label">Блок преимуществ</span>
+                  </label>
                 </li>
                 <li>
-                  <input type="checkbox" name="feature_news" id="feature_news" />
-                  <label class="filter-label" for="feature_news">Новости</label>
+                  <label class="check option">
+                    <input class="input-checkbox" type="checkbox" checked="checked" value="news" name="features">
+                    <span class="checkbox"></span>
+                    <span class="label">Новости</span>
+                  </label>
                 </li>
                 <li>
-                  <input type="checkbox" name="feature_gallery" id="feature_gallery" />
-                  <label class="filter-label" for="feature_gallery">Галерея</label>
+                  <label class="check option">
+                    <input class="input-checkbox" type="checkbox" value="gallery" name="features">
+                    <span class="checkbox"></span>
+                    <span class="label">Галерея</span>
+                  </label>
                 </li>
                 <li>
-                  <input type="checkbox" name="feature_bin" id="feature_bin" />
-                  <label class="filter-label" for="feature_bin">Корзина</label>
+                  <label class="check option">
+                    <input class="input-checkbox" type="checkbox" value="basket" name="features">
+                    <span class="checkbox"></span>
+                    <span class="label">Корзина</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -127,12 +166,12 @@
           </ul>
           <ul class="arrows-list">
             <li>
-              <a class="sort-type selected" href="#">
+              <a class="sort-type sort-down selected" href="#">
                 <span class="visually-hidden">По возрастанию</span>
               </a>
             </li>
             <li>
-              <a class="sort-type" href="#">
+              <a class="sort-type sort-up" href="#">
                 <span class="visually-hidden">По убыванию</span>
               </a>
             </li>
@@ -142,61 +181,73 @@
           <h2 class="visually-hidden">Список шаблонов</h2>
           <ul class="templates-list">
             <li class="template-item">
-              <!--Верхняя часть-->
+              <div class="template-up"></div>
               <img class="template-img" src="img/catalog/template-sedona.jpg" width="359" height="578"
                 alt="Sedona – информационный сайт для туристов" />
               <div class="template-card">
-                <h3 class="template-header">Sedona</h3>
+                <h3 class="template-header">
+                  <a href="#" class="template-header-link">Sedona</a>
+                </h3>
                 <p class="template-description">Информационный сайт для туристов</p>
                 <button class="button button-order" type="button">9 900 ₽</button>
               </div>
             </li>
             <li class="template-item">
-              <!--Верхняя часть-->
+              <div class="template-up"></div>
               <img class="template-img" src="img/catalog/template-pink_app.jpg" width="359" height="578"
                 alt="Pink App – продуктовый лендинг приложения для iOS и Android" />
               <div class="template-card">
-                <h3 class="template-header">Pink App</h3>
+                <h3 class="template-header">
+                  <a class="template-header-link" href="#">Pink App</a>
+                </h3>
                 <p class="template-description">Продуктовый лендинг приложения для iOS и Android</p>
                 <button class="button button-order" type="button">9 900 ₽</button>
               </div>
             </li>
             <li class="template-item">
-              <!--Верхняя часть-->
+              <div class="template-up"></div>
               <img class="template-img" src="img/catalog/template-barbershop.jpg" width="359" height="578"
                 alt="Barbershop – сайт салона красоты. Для мужчин, да." />
               <div class="template-card">
-                <h3 class="template-header">Barbershop</h3>
+                <h3 class="template-header">
+                  <a class="template-header-link" href="#">Barbershop</a>
+                </h3>
                 <p class="template-description">Сайт салона красоты. Для мужчин, да.</p>
                 <button class="button button-order" type="button">9 900 ₽</button>
               </div>
             </li>
             <li class="template-item">
-              <!--Верхняя часть-->
+              <div class="template-up"></div>
               <img class="template-img" src="img/catalog/template-mishka.jpg" width="359" height="578"
                 alt="Mishka – интернет-магазин вязаных игрушек" />
               <div class="template-card">
-                <h3 class="template-header">Mishka</h3>
+                <h3 class="template-header">
+                  <a class="template-header-link" href="#">Mishka</a>
+                </h3>
                 <p class="template-description">Интернет-магазин вязаных игрушек</p>
                 <button class="button button-order" type="button">9 900 ₽</button>
               </div>
             </li>
             <li class="template-item">
-              <!--Верхняя часть-->
+              <div class="template-up"></div>
               <img class="template-img" src="img/catalog/template-a_plus.jpg" width="359" height="578"
                 alt="A Plus – лендинг курсов повышения квалификации" />
               <div class="template-card">
-                <h3 class="template-header">A Plus</h3>
+                <h3 class="template-header">
+                  <a class="template-header-link" href="#">A Plus</a>
+                </h3>
                 <p class="template-description">Лендинг курсов повышения квалификации</p>
                 <button class="button button-order" type="button">9 900 ₽</button>
               </div>
             </li>
             <li class="template-item">
-              <!--Верхняя часть-->
+              <div class="template-up"></div>
               <img class="template-img" src="img/catalog/template-kvast.jpg" width="359" height="578"
                 alt="Кваст – промо-сайт производителя крафтового кваса" />
               <div class="template-card">
-                <h3 class="template-header">Кваст</h3>
+                <h3 class="template-header">
+                  <a class="template-header-link" href="#">Кваст</a>
+                </h3>
                 <p class="template-description">Промо-сайт производителя крафтового кваса</p>
                 <button class="button button-order" type="button">9 900 ₽</button>
               </div>
@@ -204,7 +255,7 @@
           </ul>
           <ul class="pages-list">
             <li>
-              <a class="button page-link page-current" href="#">1</a>
+              <a class="button page-link current" href="#">1</a>
             </li>
             <li>
               <a class="button page-link" href="#">2</a>
@@ -270,18 +321,18 @@
       <div class="social-networks container">
         <ul class="social-networks-list">
           <li>
-            <a href="https://vk.com">
-              <img class="social-icon" src="https://via.placeholder.com/80x80" width="80" height="80" alt="VK" />
+            <a href="https://vk.com" class="social-network-link">
+              <span class="social-network vk"></span>
             </a>
           </li>
           <li>
-            <a href="https://facebook.com">
-              <img class="social-icon" src="https://via.placeholder.com/80x80" width="80" height="80" alt="Facebook" />
+            <a href="https://facebook.com" class="social-network-link">
+              <span class="social-network facebook"></span>
             </a>
           </li>
           <li>
-            <a href="https://instagram.com">
-              <img class="social-icon" src="https://via.placeholder.com/80x80" width="80" height="80" alt="Instagram" />
+            <a href="https://instagram.com" class="social-network-link">
+              <span class="social-network instagram"></span>
             </a>
           </li>
         </ul>
