@@ -913,8 +913,14 @@ img {
   opacity: 0.12;
 }
 
-.template-img {
+.template-picture {
+  width: 360px;
+  height: 578px;
+  background-color: var(--basic-grey);
   position: absolute;
+}
+
+.template-img {
   width: 359px;
   height: 578px;
 }
