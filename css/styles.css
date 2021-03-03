@@ -707,26 +707,18 @@ img {
 }
 
 .input-checkbox:focus+.checkbox, .input-checkbox:hover+.checkbox {
-  background-image: url("../img/catalog/checkbox-off.svg");
-  background-repeat: no-repeat;
   opacity: 1;
 }
 
 .input-checkbox:checked:focus+.checkbox, .input-checkbox:checked:hover+.checkbox {
-  background-image: url("../img/catalog/checkbox-on.svg");
-  background-repeat: no-repeat;
   opacity: 1;
 }
 
 .input-checkbox:disabled+.checkbox {
-  background-image: url("../img/catalog/checkbox-off.svg");
-  background-repeat: no-repeat;
   opacity: 0.1;
 }
 
 .input-checkbox:checked:disabled+.checkbox {
-  background-image: url("../img/catalog/checkbox-on.svg");
-  background-repeat: no-repeat;
   opacity: 0.1;
 }
 
@@ -752,27 +744,11 @@ img {
   opacity: 0.4;
 }
 
-.input-radio:focus+.radiobutton, .input-radio:hover+.radiobutton {
-  background-image: url("../img/catalog/radio-off.svg");
-  background-repeat: no-repeat;
+.input-radio:focus+.radiobutton, .input-radio:hover+.radiobutton, .input-radio:checked:focus+.radiobutton, .input-radio:checked:hover+.radiobutton {
   opacity: 1;
 }
 
-.input-radio:checked:focus+.radiobutton, .input-radio:checked:hover+.radiobutton {
-  background-image: url("../img/catalog/radio-on.svg");
-  background-repeat: no-repeat;
-  opacity: 1;
-}
-
-.input-radio:disabled+.radiobutton {
-  background-image: url("../img/catalog/radio-off.svg");
-  background-repeat: no-repeat;
-  opacity: 0.1;
-}
-
-.input-radio:checked:disabled+.radiobutton {
-  background-image: url("../img/catalog/radio-on.svg");
-  background-repeat: no-repeat;
+.input-radio:disabled+.radiobutton, .input-radio:checked:disabled+.radiobutton {
   opacity: 0.1;
 }
 
@@ -908,13 +884,13 @@ img {
 .template-up {
   background-image: url("../img/catalog/browser.svg");
   background-repeat: no-repeat;
-  width: 360px;
+  width: 359px;
   height: 40px;
   opacity: 0.12;
 }
 
 .template-picture {
-  width: 360px;
+  width: 359px;
   height: 578px;
   background-color: var(--basic-grey);
   position: absolute;
