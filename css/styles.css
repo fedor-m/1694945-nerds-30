@@ -116,7 +116,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   width: 219px;
-  margin-top: 61px;
+  margin-top: 37px;
 }
 
 .button-order {
@@ -1006,35 +1006,49 @@ img {
 
 /*Контактная информация (нижняя часть)*/
 
-.contacts .container {
-  padding-top: 80px;
+.main-footer {
   position: relative;
+}
+
+.contacts .container {
+  position: relative;
+  padding-top: 36px;
 }
 
 .map {
   position: relative;
   padding-top: 80px;
+  height: 416px;
 }
 
-.map-wrapper {
-  width: 100%;
+.map-img {
+  max-width: 1440px;
   height: 416px;
+  position: absolute;
+  margin: 0 auto;
 }
 
 .about-us {
   width: 319px;
   height: 308px;
   background-color: var(--basic-white);
-  position: absolute;
-  bottom: 140px;
+  /* position: absolute; */
+  /* bottom: 140px; */
+  /* margin-bottom: 196px; */
+  /* margin-top: -147px; */
+  z-index: 2;
+  position: relative;
+  /* margin-left: auto; */
+  padding-left: 50px;
+  padding-right: 39px;
 }
 
 .our-title {
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
-  margin-top: 43px;
-  text-align: center;
+  /* margin-top: 43px; */
+  padding-top: 49px;
 }
 
 .our-address {
@@ -1042,6 +1056,7 @@ img {
   font: inherit;
   line-height: 18px;
   width: 230px;
+  padding-bottom: 24px;
 }
 
 .our-telephone {
@@ -1050,23 +1065,24 @@ img {
   line-height: 18px;
 }
 
-/*Блок со скидкой*/
-
-.discount-header {
-  font-size: 36px;
-  line-height: 10px;
-}
-
-.discount-description {
-  line-height: 22px;
-  color: var(--basic-black-social);
-}
-
 /*Модальное окно*/
 
 .modal {
   width: 960px;
-  background-color: transparent;
+  background-color: var(--basic-white);
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  /* top: -68px; */
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: 3;
+  height: 590px;
+  bottom: 124px;
+  display: none;
+}
+
+.modal.opened {
+  display: block;
 }
 
 .modal-content {
@@ -1138,6 +1154,7 @@ img {
   border-radius: 3px;
   color: var(--basic-black-social);
   font: inherit;
+  line-height: 18px;
 }
 
 .modal-input:focus, .modal-textarea:focus {
@@ -1155,9 +1172,12 @@ img {
 }*/
 
 .social-networks .container {
-  display: grid;
-  grid-template-columns: 267px 1fr;
-  gap: 139px;
+  /* display: grid; */
+  /* grid-template-columns: 267px 1fr; */
+  /* gap: 139px; */
+  padding-top: 134px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .social-networks-list {
@@ -1211,4 +1231,21 @@ img {
   background-image: url("../img/instagram.svg");
   width: 21px;
   height: 21px;
+}
+
+/*Блок со скидкой*/
+
+.discount {
+  /* width: auto; */
+  padding-right: 188px;
+}
+
+.discount-header {
+  font-size: 36px;
+  line-height: 10px;
+}
+
+.discount-description {
+  line-height: 22px;
+  color: var(--basic-black-social);
 }
