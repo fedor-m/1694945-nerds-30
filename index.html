@@ -49,10 +49,12 @@
         <ul class="advantages-list">
           <li class="advantage-item chosen">
             <div class="advantage-content">
-              <h3 class="advantage-header">Долго, дорого, скрупулёзно</h3>
+              <h3 class="advantage-header">Долго, дорого, скрупулёзно.</h3>
               <p class="advantage-description">
+
                 Математически выверенный дизайн для вашего сайта или мобильного
                 приложения.
+
               </p>
               <a class="button button-advantage" href="#"> Узнать больше </a>
             </div>
@@ -61,7 +63,7 @@
           </li>
           <li class="advantage-item">
             <div class="advantage-content">
-              <h3 class="advantage-header">Любим математику, как никто другой</h3>
+              <h3 class="advantage-header">Любим математику, как никто другой.</h3>
               <p class="advantage-description">
                 Никакого креатива, только математические формулы для расчета
                 идеальных пропорций.
@@ -75,7 +77,7 @@
           </li>
           <li class="advantage-item">
             <div class="advantage-content">
-              <h3 class="advantage-header">Только ночь, только хардкор</h3>
+              <h3 class="advantage-header">Только ночь, только хардкор.</h3>
               <p class="advantage-description">
                 Ближе к полуночи работа только начинается.
               </p>
@@ -87,13 +89,13 @@
         </ul>
         <ul class="advantages-switchers-list">
           <li class="advantage-switcher-item">
-            <button class="advantage-switcher chosen" type="button"></button>
+            <button class="advantage-switcher chosen" type="button" aria-label="Первый слайд" value="1"></button>
           </li>
           <li class="advantage-switcher-item">
-            <button class="advantage-switcher" type="button"></button>
+            <button class="advantage-switcher" type="button" aria-label="Второй слайд" value="2"></button>
           </li>
           <li class="advantage-switcher-item">
-            <button class="advantage-switcher" type="button"></button>
+            <button class="advantage-switcher" type="button" aria-label="Третий слайд" value="3"></button>
           </li>
         </ul>
       </div>
@@ -211,8 +213,8 @@
   <footer class="main-footer">
     <section class="contacts">
       <h2 class="visually-hidden">О нас</h2>
-      <div>
-        <img src="img/map.jpg" width="1440" height="416" alt="Карта-схема расположения студии" />
+      <div class="map">
+        <img class="map-wrapper" src="img/map.jpg" width="100%" height="416" alt="Карта-схема расположения студии" />
       </div>
       <div class="container">
         <div class="about-us">
@@ -226,13 +228,16 @@
       </div>
     </section>
     <section class="modal">
-      <div class="container">
-        <h2 class="visually-hidden">Обратная связь</h2>
-        <div>
-          <h3 class="modal-header">Напишите нам</h3>
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <!--<div class="container">-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Напишите нам</h3>
           <button class="modal-close" type="button">
             <span class="visually-hidden">Закрыть</span>
           </button>
+        </div>
+        <div class="modal-body">
           <form class="modal-form" method="POST" action="http://echo.htmlacademy.ru">
             <div class="modal-input-group">
               <label class="modal-label" for="name"> Ваше имя: </label>
@@ -252,6 +257,7 @@
           </form>
         </div>
       </div>
+      <!--</div>-->
     </section>
     <section class="social-networks">
       <div class="social-networks container">
