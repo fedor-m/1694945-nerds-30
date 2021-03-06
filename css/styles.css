@@ -112,6 +112,7 @@ img {
   -webkit-hyphens: auto;
   hyphens: auto;
   text-align: center;
+  word-break: break-all;
 }
 
 .button-advantage {
@@ -293,7 +294,7 @@ img {
 }
 
 .advantage-content {
-  width: 416px;
+  width: 397px;
 }
 
 .advantage-header {
@@ -932,12 +933,10 @@ img {
   padding: 55px 0 0 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 443px;
 }
 
 .page-item:not(:last-child) {
-  margin: 0 0 10px;
+  margin: 0 12px 0 0;
   min-width: 50px;
 }
 
