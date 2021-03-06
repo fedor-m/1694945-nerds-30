@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <title>Магазин</title>
   <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.min.css" />
   <link rel="icon" href="favicon.ico" />
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="img/favicon/152.png" type="image/png" />
@@ -58,15 +58,15 @@
                 <div class="range-controls">
                   <div class="scale">
                     <div class="bar" style="
-                      width: 30%;
-                      margin-left: 20%
+                      width: 100%;
+                      /*margin-left: 20%*/
                     "></div>
                   </div>
                   <div class="toggle toggle-min" tabindex="0" style="
-                    left: 20%
+                    left: 4%
                   "></div>
                   <div class="toggle toggle-max" tabindex="0" style="
-                    left: 50%
+                    left: 92%
                   "></div>
                 </div>
                 <div class="price-controls">
@@ -191,7 +191,7 @@
                 <h3 class="template-header">
                   <a href="#" class="template-header-link">Sedona</a>
                 </h3>
-                <p class="template-description">Информационный сайт для туристов</p>
+                <p class="template-description">Информационный сайт<br>для туристов</p>
                 <button class="button button-order" type="button">9 900 ₽</button>
               </div>
             </li>
@@ -220,7 +220,7 @@
                 <h3 class="template-header">
                   <a class="template-header-link" href="#">Barbershop</a>
                 </h3>
-                <p class="template-description">Сайт салона красоты. Для мужчин, да.</p>
+                <p class="template-description">Сайт салона красоты.<br>Для мужчин, да.</p>
                 <button class="button button-order" type="button">9 900 ₽</button>
               </div>
             </li>
@@ -232,7 +232,7 @@
                 <h3 class="template-header">
                   <a class="template-header-link" href="#">Mishka</a>
                 </h3>
-                <p class="template-description">Интернет-магазин вязаных игрушек</p>
+                <p class="template-description">Интернет-магазин<br>вязаных игрушек</p>
                 <button class="button button-order" type="button">9 900 ₽</button>
               </div>
             </li>
@@ -264,16 +264,16 @@
             </li>
           </ul>
           <ul class="pages-list">
-            <li>
+            <li class="page-item">
               <a class="button page-link current" href="#">1</a>
             </li>
-            <li>
+            <li class="page-item">
               <a class="button page-link" href="#">2</a>
             </li>
-            <li>
+            <li class="page-item">
               <a class="button page-link" href="#">3</a>
             </li>
-            <li>
+            <li class="page-item">
               <a class="button page-next" href="#">Следующая</a>
             </li>
           </ul>
@@ -283,47 +283,51 @@
   </main>
   <footer class="main-footer">
     <section class="contacts">
-      <div class="container">
-        <h2 class="visually-hidden">О нас</h2>
-        <div>
-          <!--Здесь будет карта-->
-        </div>
-        <img src="img/map.jpg" width="1440" height="416" alt="Карта-схема расположения студии" />
-        <div class="about-us">
-          <h3 class="our-title">nërds design studio</h3>
-          <address class="our-address">
-            191196, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-          </address>
-          <a class="our-telephone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-          <button type="button" class="button button-mail">Напишите нам</button>
+      <h2 class="visually-hidden">О нас</h2>
+      <div class="map">
+        <!--Здесь будет карта-->
+        <img class="map-img" src="img/map.jpg" width="100%" height="416" alt="Карта-схема расположения студии" />
+        <div class="container">
+          <div class="about-us">
+            <h3 class="our-title">nërds design studio</h3>
+            <address class="our-address">
+              191196, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            </address>
+            <a class="our-telephone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+            <button type="button" class="button button-mail">Напишите нам</button>
+          </div>
         </div>
       </div>
     </section>
     <section class="modal">
+      <h2 class="visually-hidden">Обратная связь</h2>
       <div class="container">
-        <h2 class="visually-hidden">Обратная связь</h2>
-        <div>
-          <h3 class="modal-header">Напишите нам</h3>
-          <button class="modal-close" type="button">
-            <span class="visually-hidden">Закрыть</span>
-          </button>
-          <form class="modal-form" method="POST" action="http://echo.htmlacademy.ru">
-            <div class="modal-input-group">
-              <label class="modal-label" for="name"> Ваше имя: </label>
-              <input class="modal-input" type="text" id="name" name="name" placeholder="Имя Фамилия" required />
-            </div>
-            <div class="modal-input-group">
-              <label class="modal-label" for="name"> Ваш e-mail: </label>
-              <input class="modal-input" type="email" id="email" name="email" placeholder="email@example.com"
-                required />
-            </div>
-            <div class="modal-textarea-group">
-              <label class="modal-label" for="letter"> Текст письма: </label>
-              <textarea class="modal-textarea" id="letter" name="letter" placeholder="В свободной форме"
-                required></textarea>
-            </div>
-            <button type="submit" class="button button-send">Отправить</button>
-          </form>
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Напишите нам</h3>
+            <button class="modal-close" type="button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="modal-form" method="POST" action="http://echo.htmlacademy.ru">
+              <div class="modal-input-group">
+                <label class="modal-label" for="name"> Ваше имя: </label>
+                <input class="modal-input" type="text" id="name" name="name" placeholder="Имя Фамилия" required />
+              </div>
+              <div class="modal-input-group">
+                <label class="modal-label" for="name"> Ваш e-mail: </label>
+                <input class="modal-input" type="email" id="email" name="email" placeholder="email@example.com"
+                  required />
+              </div>
+              <div class="modal-textarea-group">
+                <label class="modal-label" for="letter"> Текст письма: </label>
+                <textarea class="modal-textarea" id="letter" name="letter" placeholder="В свободной форме"
+                  required></textarea>
+              </div>
+              <button type="submit" class="button button-send">Отправить</button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
