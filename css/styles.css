@@ -493,7 +493,7 @@ img {
   font-weight: 700;
   line-height: 40px;
   position: relative;
-  top: -9px;
+  bottom: 9px;
 }
 
 .indicator-caption {
@@ -930,14 +930,6 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 443px;
-}
-
-.page {
-  background-color: var(--basic-grey-border);
-  border-radius: 3px;
-  height: 50px;
-  text-align: center;
-  width: 50px;
 }
 
 .page-item {
