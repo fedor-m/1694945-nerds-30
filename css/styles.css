@@ -103,13 +103,13 @@ img {
 .button {
   border: none;
   border-radius: 3px;
-  display: block;
   font: inherit;
   font-weight: 500;
   line-height: 50px;
-  height: 50px;
-  text-align: center;
   text-transform: uppercase;
+  display: block;
+  word-wrap: break-word;
+  text-align: center;
 }
 
 .button-advantage {
@@ -932,15 +932,15 @@ img {
   width: 443px;
 }
 
-.page-item {
+.page-item:not(:last-child) {
   /* flex: 1 1 auto; */
   margin: 0 0 10px;
+  width: 50px;
 }
 
 .page-link {
   background-color: var(--basic-grey-border);
   color: var(--basic-black);
-  width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -950,6 +950,7 @@ img {
   background-color: var(--basic-white);
   border: 3px solid var(--basic-grey-current);
   box-sizing: border-box;
+  height: 50px;
 }
 
 .page-next {
