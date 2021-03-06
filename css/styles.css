@@ -1,4 +1,4 @@
-/*Подключение внешнего шрифта*/
+/*Подключение шрифта*/
 
 @font-face {
   font-family: "Roboto";
@@ -55,7 +55,7 @@
   --basic-yellow-hover: #eab534;
 }
 
-/*"Глобальные" селекторы*/
+/*Глобальные селекторы*/
 
 html {
   height: 100%;
@@ -82,7 +82,23 @@ a {
   text-decoration: none;
 }
 
-/*Стили кнопок*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*Стили для кнопок*/
 
 .button {
   border: none;
@@ -180,30 +196,12 @@ a {
 
 .button-submit-filters:active, .page-link:active, .page-next:active {
   background-color: var(--basic-grey-active);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, .1);
   mix-blend-mode: normal;
   color: var(--basic-grey-pressed);
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/*Сокрытие заголовков и иных элементов*/
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-/*Стили для определённых частей страниц*/
+/*Контейнер*/
 
 .container {
   max-width: 1160px;
@@ -211,7 +209,7 @@ img {
   padding: 0 10px;
 }
 
-/*Шапка сайта*/
+/*Верхняя часть*/
 
 .main-header {
   padding-top: 50px;
@@ -258,7 +256,7 @@ img {
 }
 
 .basic-link:active, .site-link:active {
-  opacity: 0.3;
+  opacity: .3;
 }
 
 .basic-link:hover:not(.active), .site-link:hover:not(.active) {
@@ -283,9 +281,7 @@ img {
   background: var(--basic-grey);
 }
 
-/*Тело сайта*/
-
-/*Преимущества*/
+/*Блок преимуществ*/
 
 .advantages .container {
   position: relative;
@@ -308,7 +304,7 @@ img {
   color: var(--basic-black-extra);
   margin-bottom: 36px;
   padding: 0;
-  width: 416px;
+  max-width: 416px;
 }
 
 .advantages-list {
@@ -318,9 +314,6 @@ img {
 }
 
 .advantage-item.chosen {
-  /*display: grid;
-  grid-template-columns: 397px 760px;
-  height: 431px;*/
   display: flex;
   width: 1160px;
 }
@@ -383,7 +376,7 @@ img {
   transform: translate(-50%, -50%);
 }
 
-/*.Услуги*/
+/*Блок услуг*/
 
 .services .container {
   padding-top: 56px;
@@ -403,8 +396,6 @@ img {
   list-style: none;
   padding: 0;
   display: grid;
-  /*grid-template-columns: repeat(3, 300px);
-  gap: 100px;*/
   display: flex;
   justify-content: space-between;
   text-align: left;
@@ -417,7 +408,7 @@ img {
 }
 
 .service-description {
-  width: 260px;
+  max-width: 260px;
 }
 
 .service-image {
@@ -425,7 +416,7 @@ img {
   height: 150px;
 }
 
-/*Кредо*/
+/*Блок кредо*/
 
 .credo {
   padding-top: 20px;
@@ -474,8 +465,6 @@ img {
   color: var(--basic-black-extra);
 }
 
-/*Показатели*/
-
 .indicators-header {
   font-size: 16px;
   font-weight: 700;
@@ -512,7 +501,7 @@ img {
   line-height: 18px;
 }
 
-/*Партнёры*/
+/*Блок партнёров*/
 
 .partners .container {
   border-top: 2px solid var(--basic-grey-border);
@@ -525,9 +514,6 @@ img {
   margin: 0;
   list-style: none;
   padding: 0;
-  /*display: grid;
-  grid-template-columns: repeat(4, 279px);
-  gap: 47px;*/
   display: flex;
   justify-content: space-between;
   text-align: left;
@@ -549,20 +535,18 @@ img {
 }
 
 .partner-img {
-  opacity: 0.3;
+  opacity: .3;
 }
 
 .partner-img:active {
-  opacity: 0.1;
+  opacity: .1;
 }
 
 .partner-img:focus, .partner-img:hover {
   opacity: 1;
 }
 
-/*Страница каталога*/
-
-/*Заголовок*/
+/*Внутренняя страница*/
 
 .catalog-main {
   padding-top: 55px;
@@ -590,7 +574,7 @@ img {
   grid-template-rows: 26px;
 }
 
-/*Заголовок группы в форме*/
+/*Форма слева*/
 
 .filter-legend {
   font-size: 18px;
@@ -598,8 +582,6 @@ img {
   line-height: 30px;
   text-transform: uppercase;
 }
-
-/*Блок с ценой*/
 
 .filters-price {
   margin: 0 0 54px 15px;
@@ -636,7 +618,6 @@ img {
 }
 
 .range-controls .bar {
-  /*width: 70%;*/
   height: 2px;
   background: var(--basic-green);
 }
@@ -686,8 +667,6 @@ img {
   height: 38px;
 }
 
-/*Радиокнопки и «галочки»*/
-
 .option {
   display: block;
   margin-bottom: 17px;
@@ -706,13 +685,13 @@ img {
   height: 23px;
   background-image: url("../img/catalog/checkbox-off.svg");
   background-repeat: no-repeat;
-  opacity: 0.4;
+  opacity: .4;
 }
 
 .input-checkbox:checked+.checkbox {
   background-image: url("../img/catalog/checkbox-on.svg");
   background-repeat: no-repeat;
-  opacity: 0.4;
+  opacity: .4;
   width: 25px;
 }
 
@@ -725,11 +704,11 @@ img {
 }
 
 .input-checkbox:disabled+.checkbox {
-  opacity: 0.1;
+  opacity: .1;
 }
 
 .input-checkbox:checked:disabled+.checkbox {
-  opacity: 0.1;
+  opacity: .1;
 }
 
 .label {
@@ -745,13 +724,13 @@ img {
   height: 25px;
   background-image: url("../img/catalog/radio-off.svg");
   background-repeat: no-repeat;
-  opacity: 0.4;
+  opacity: .4;
 }
 
 .input-radio:checked+.radiobutton {
   background-image: url("../img/catalog/radio-on.svg");
   background-repeat: no-repeat;
-  opacity: 0.4;
+  opacity: .4;
 }
 
 .input-radio:focus+.radiobutton, .input-radio:hover+.radiobutton, .input-radio:checked:focus+.radiobutton, .input-radio:checked:hover+.radiobutton {
@@ -759,14 +738,12 @@ img {
 }
 
 .input-radio:disabled+.radiobutton, .input-radio:checked:disabled+.radiobutton {
-  opacity: 0.1;
+  opacity: .1;
 }
 
 .filters-features, .filters-grid {
   border: none;
 }
-
-/*Особенности*/
 
 .features-list {
   margin: 0;
@@ -774,36 +751,29 @@ img {
   padding: 0;
 }
 
-/*Сетки*/
-
 .grids-list {
   margin: 0;
   list-style: none;
   padding: 0;
 }
 
-/*Сортировки*/
+/*Сортировка*/
 
 .catalog-sort {
-  /* display: grid; */
-  /* grid-template-columns: 133px 296px 22px; */
-  /* column-gap: 148px; */
   display: flex;
   align-items: center;
   margin-top: 5px;
 }
 
 .sort-list {
-  margin: 0 auto 0 254px;
+  margin: 0 auto 4px 254px;
   list-style: none;
   padding: 0;
-  /* display: grid; */
-  /* grid-template-columns: repeat(3, 101px); */
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 300px;
-  height: 18px;
+  flex-wrap: wrap;
 }
 
 .sort-title {
@@ -819,7 +789,7 @@ img {
   color: var(--basic-black);
   font-size: 14px;
   line-height: 18px;
-  opacity: 0.3;
+  opacity: .3;
   text-transform: uppercase;
 }
 
@@ -828,17 +798,14 @@ img {
 }
 
 .arrows-list {
-  /* margin: 1px 0 0 0; */
   list-style: none;
   padding: 0;
-  /* display: grid; */
-  /* grid-template-columns: repeat(2, 11px); */
-  /* column-gap: 29px; */
   display: flex;
   width: 40px;
-  height: 10px;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  margin-top: 21px;
 }
 
 .sort-up {
@@ -857,20 +824,16 @@ img {
   display: block;
 }
 
-/*Шаблоны*/
-
 .catalog-templates {
   grid-column: 2 / -1;
 }
+
+/*Шаблоны*/
 
 .templates-list {
   margin: 20px 0;
   list-style: none;
   padding: 0;
-  /* display: grid; */
-  /* grid-template-columns: repeat(2, 358px); */
-  /* gap: 30px 40px; */
-  /* grid-template-rows: repeat(3, 578px); */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -896,7 +859,7 @@ img {
   background-repeat: no-repeat;
   width: 359px;
   height: 40px;
-  opacity: 0.12;
+  opacity: .12;
 }
 
 .template-picture {
@@ -954,19 +917,17 @@ img {
 
 .template-header-link:active {
   color: var(--basic-black);
-  opacity: 0.3;
+  opacity: .3;
 }
 
-/*Страницы*/
+/*Кнопки-страницы*/
 
 .pages-list {
   margin: 0;
   list-style: none;
-  padding: 55px 0 60px 0;
-  /* display: grid; */
-  /* grid-template-columns: repeat(3, 50px) 1fr; */
-  /* column-gap: 11px; */
+  padding: 55px 0 0 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 443px;
 }
@@ -977,6 +938,11 @@ img {
   height: 50px;
   text-align: center;
   width: 50px;
+}
+
+.page-item {
+  /* flex: 1 1 auto; */
+  margin: 0 0 10px;
 }
 
 .page-link {
@@ -1000,7 +966,7 @@ img {
   width: 260px;
 }
 
-/*Контактная информация (нижняя часть)*/
+/*Нижняя часть*/
 
 .main-footer {
   position: relative;
@@ -1010,6 +976,8 @@ img {
   position: relative;
   padding-top: 36px;
 }
+
+/*Карта*/
 
 .map {
   position: relative;
@@ -1022,19 +990,19 @@ img {
   height: 416px;
   position: absolute;
   margin: 0 auto;
+  display: block;
+  transform: translateX(-50%);
+  left: 50%;
 }
+
+/*Контактная информация*/
 
 .about-us {
   width: 319px;
   height: 308px;
   background-color: var(--basic-white);
-  /* position: absolute; */
-  /* bottom: 140px; */
-  /* margin-bottom: 196px; */
-  /* margin-top: -147px; */
   z-index: 2;
   position: relative;
-  /* margin-left: auto; */
   padding-left: 50px;
   padding-right: 39px;
 }
@@ -1043,7 +1011,6 @@ img {
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
-  /* margin-top: 43px; */
   padding-top: 49px;
 }
 
@@ -1069,8 +1036,7 @@ img {
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
-  /* top: -68px; */
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
   z-index: 3;
   height: 590px;
   bottom: 124px;
@@ -1083,7 +1049,6 @@ img {
 
 .modal-content {
   width: 790px;
-  /*height: 590px;*/
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -1112,7 +1077,7 @@ img {
 }
 
 .modal-close:hover, .modal-close:active {
-  opacity: 0.3;
+  opacity: .3;
 }
 
 .modal-label {
@@ -1162,15 +1127,9 @@ img {
   border: 2px solid var(--basiс-grey-input-hover)
 }
 
-/*.modal-form.submitted modal-input:invalid, .modal-form.submitted .modal-textarea:invalid {
-  border: 2px solid var(--basic-red-hover);
-  color:  var(--basic-red-hover);
-}*/
+/*Блок кнопок со ссылками на соцсети*/
 
 .social-networks .container {
-  /* display: grid; */
-  /* grid-template-columns: 267px 1fr; */
-  /* gap: 139px; */
   padding-top: 134px;
   display: flex;
   justify-content: space-between;
@@ -1180,10 +1139,6 @@ img {
   margin: 0;
   list-style: none;
   padding: 0;
-  /*display: grid;
-  grid-template-columns: repeat(3, 81px);
-  grid-template-rows: 81px;
-  gap: 12px;*/
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -1195,7 +1150,6 @@ img {
   width: 81px;
   height: 81px;
   background-image: linear-gradient(0, var(--basic-grey-social), var(--basic-grey-social));
-  /*background-color: var(--basic-grey-social);*/
   border-radius: 50%;
   align-items: center;
   justify-content: center;
@@ -1232,7 +1186,6 @@ img {
 /*Блок со скидкой*/
 
 .discount {
-  /* width: auto; */
   padding-right: 188px;
 }
 
