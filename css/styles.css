@@ -336,6 +336,7 @@ img {
 .advantage-img {
   width: 760px;
   height: 431px;
+  object-fit: contain;
 }
 
 .advantages-switchers-list {
@@ -419,6 +420,7 @@ img {
 .service-image {
   width: 300px;
   height: 150px;
+  object-fit: contain;
 }
 
 /*Блок кредо*/
@@ -541,6 +543,7 @@ img {
 
 .partner-img {
   opacity: .3;
+  object-fit: contain;
 }
 
 .partner-img:active {
@@ -877,6 +880,7 @@ img {
 .template-img {
   width: 359px;
   height: 578px;
+  object-fit: contain;
 }
 
 .template-card {
@@ -988,6 +992,7 @@ img {
   display: block;
   transform: translateX(-50%);
   left: 50%;
+  object-fit: contain;
 }
 
 /*Контактная информация*/
