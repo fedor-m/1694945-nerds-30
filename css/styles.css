@@ -75,6 +75,7 @@ body {
   line-height: 24px;
   min-height: 100%;
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
 }
 
@@ -336,6 +337,7 @@ img {
 .advantage-img {
   width: 760px;
   height: 431px;
+  -o-object-fit: contain;
   object-fit: contain;
 }
 
@@ -420,6 +422,7 @@ img {
 .service-image {
   width: 300px;
   height: 150px;
+  -o-object-fit: contain;
   object-fit: contain;
 }
 
@@ -543,6 +546,7 @@ img {
 
 .partner-img {
   opacity: .3;
+  -o-object-fit: contain;
   object-fit: contain;
 }
 
@@ -578,6 +582,7 @@ img {
 .catalog-container {
   display: grid;
   grid-template-columns: 260px 1fr;
+  -moz-column-gap: 140px;
   column-gap: 140px;
   grid-template-rows: 26px;
 }
@@ -880,6 +885,7 @@ img {
 .template-img {
   width: 359px;
   height: 578px;
+  -o-object-fit: contain;
   object-fit: contain;
 }
 
@@ -992,6 +998,7 @@ img {
   display: block;
   transform: translateX(-50%);
   left: 50%;
+  -o-object-fit: contain;
   object-fit: contain;
 }
 
@@ -1036,6 +1043,7 @@ img {
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
+  -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
   z-index: 3;
   height: 590px;
