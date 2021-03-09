@@ -125,7 +125,7 @@ img {
   width: 240px;
 }
 
-.button-advantage:hover, .button-mail:hover, .button-order:hover, .button-send:hover, .button-service-websites:hover {
+.button-advantage:hover, .button-advantage:focus, .button-mail:hover, .button-mail:focus, .button-order:hover, .button-order:focus, .button-send:hover, .button-send:focus, .button-service-websites:hover, .button-service-websites:focus {
   background-color: var(--basic-red-hover);
 }
 
