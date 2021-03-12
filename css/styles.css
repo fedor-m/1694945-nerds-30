@@ -137,7 +137,7 @@ img {
 .button-mail {
   background-color: var(--basic-red);
   color: var(--basic-white);
-  margin-left: auto;
+  margin-left: 1px;
   margin-right: auto;
   width: 219px;
   margin-top: 37px;
@@ -1016,7 +1016,7 @@ img {
   border: 0;
   width: 100%;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
 }
 
 /*Контактная информация*/
@@ -1025,7 +1025,7 @@ img {
   width: 319px;
   min-height: 308px;
   background-color: var(--basic-white);
-  z-index: 2;
+  z-index: 3;
   position: relative;
   padding-left: 50px;
   padding-right: 39px;
@@ -1064,13 +1064,20 @@ img {
   -webkit-filter: drop-shadow(0 4px 4px var(--basic-grey-filter));
   filter: drop-shadow(0 4px 4px var(--basic-grey-filter));
   z-index: 3;
-  height: 590px;
+  min-height: 590px;
   bottom: 124px;
   display: none;
 }
 
 .modal.opened {
   display: block;
+  -webkit-animation: animate 0.6s;
+  animation: animate 0.6s;
+}
+
+.modal.opened.error {
+  -webkit-animation: shake 0.6s;
+  animation: shake 0.6s;
 }
 
 .modal-content {
@@ -1102,8 +1109,12 @@ img {
   margin-top: 34px;
 }
 
-.modal-close:hover, .modal-close:active {
+.modal-close:hover {
   opacity: .3;
+}
+
+.modal-close:active {
+  opacity: .1;
 }
 
 .modal-label {
@@ -1125,7 +1136,7 @@ img {
 .modal-input {
   width: 360px;
   height: 50px;
-  border: 2px solid var(--basic-grey-input);
+  border: 3px solid var(--basic-grey-input);
   box-sizing: border-box;
   border-radius: 3px;
   color: var(--basic-black-social);
@@ -1144,13 +1155,64 @@ img {
   line-height: 18px;
 }
 
-.modal-input:focus, .modal-textarea:focus {
-  border: 2px solid var(--basiс-black);
-  color: var(--basiс-black);
-}
-
 .modal-input:hover, .modal-textarea:hover {
   border: 2px solid var(--basiс-grey-input-hover)
+}
+
+.modal-input:focus, .modal-textarea:focus {
+  border: 2px solid var(--basic-black);
+  color: var(--basic-black);
+}
+
+.modal.opened.error input.invalid, .modal.opened.error textarea.invalid {
+  border: 3px solid var(--basic-red-hover);
+  color: var(--basic-red-hover);
+}
+
+@-webkit-keyframes animate {
+  from {
+    bottom: 0;
+    opacity: 0
+  }
+  to {
+    bottom: 124px;
+    opacity: 1
+  }
+}
+
+@keyframes animate {
+  from {
+    bottom: 0;
+    opacity: 0
+  }
+  to {
+    bottom: 124px;
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    bottom: 124px;
+  }
+  10%, 30%, 50%, 70%, 90% {
+    bottom: 0;
+  }
+  20%, 40%, 60%, 80% {
+    bottom: 150px;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    bottom: 124px;
+  }
+  10%, 30%, 50%, 70%, 90% {
+    bottom: 0;
+  }
+  20%, 40%, 60%, 80% {
+    bottom: 150px;
+  }
 }
 
 /*Блок кнопок со ссылками на соцсети*/
