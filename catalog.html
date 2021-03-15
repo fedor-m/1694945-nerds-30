@@ -48,106 +48,107 @@
       <h2 class="catalog-title">Магазин готовых шаблонов</h2>
     </section>
     <section class="catalog-main">
+      <h2 class="visually-hidden">Выбор шаблона</h2>
       <div class="container catalog-container">
         <section class="catalog-filters">
-          <h2 class="visually-hidden">Выбор шаблона</h2>
-          <form class="filters-form" method="get" action="https://echo.htmlacademy.ru/">
-            <fieldset class="filters-price">
-              <legend class="filter-legend">Стоимость:</legend>
-              <div class="range-filter">
-                <div class="range-controls">
-                  <div class="scale">
-                    <div class="bar" style="
+          <h3 class="visually-hidden">Фильтры</h2>
+            <form class="filters-form" method="get" action="https://echo.htmlacademy.ru/">
+              <fieldset class="filters-price">
+                <legend class="filter-legend">Стоимость:</legend>
+                <div class="range-filter">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar" style="
                       width: 100%;
                     "></div>
-                  </div>
-                  <div class="toggle toggle-min" tabindex="0" style="
+                    </div>
+                    <div class="toggle toggle-min" tabindex="0" style="
                     left: 4%
                   "></div>
-                  <div class="toggle toggle-max" tabindex="0" style="
+                    <div class="toggle toggle-max" tabindex="0" style="
                     left: 62%
                   "></div>
+                  </div>
+                  <div class="price-controls">
+                    <label class="min-price">
+                      от <input type="number" name="min-price" value="0">
+                    </label>
+                    <label class="max-price">
+                      до <input type="number" name="max-price" value="15000">
+                    </label>
+                  </div>
                 </div>
-                <div class="price-controls">
-                  <label class="min-price">
-                    от <input type="number" name="min-price" value="0">
-                  </label>
-                  <label class="max-price">
-                    до <input type="number" name="max-price" value="15000">
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-            <fieldset class="filters-grid">
-              <legend class="filter-legend">Сетка:</legend>
-              <ul class="grids-list">
-                <li>
-                  <label class="radio option">
-                    <input class="input-radio" type="radio" checked="checked" value="adaptive" name="grid">
-                    <span class="radiobutton"></span>
-                    <span class="label">Адаптивная</span>
-                  </label>
-                </li>
-                <li>
-                  <label class="radio option">
-                    <input class="input-radio" type="radio" value="fixed" name="grid">
-                    <span class="radiobutton"></span>
-                    <span class="label">Фиксированная</span>
-                  </label>
-                </li>
-                <li>
-                  <label class="radio option">
-                    <input class="input-radio" type="radio" value="fluid" name="grid">
-                    <span class="radiobutton"></span>
-                    <span class="label">Резиновая</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="filters-features">
-              <legend class="filter-legend">Особенности:</legend>
-              <ul class="features-list">
-                <li>
-                  <label class="check option">
-                    <input class="input-checkbox" type="checkbox" checked="checked" value="slider" name="features">
-                    <span class="checkbox"></span>
-                    <span class="label">Слайдер</span>
-                  </label>
-                </li>
-                <li>
-                  <label class="check option">
-                    <input class="input-checkbox" type="checkbox" value="advantages" name="features">
-                    <span class="checkbox"></span>
-                    <span class="label">Блок преимуществ</span>
-                  </label>
-                </li>
-                <li>
-                  <label class="check option">
-                    <input class="input-checkbox" type="checkbox" checked="checked" value="news" name="features">
-                    <span class="checkbox"></span>
-                    <span class="label">Новости</span>
-                  </label>
-                </li>
-                <li>
-                  <label class="check option">
-                    <input class="input-checkbox" type="checkbox" value="gallery" name="features">
-                    <span class="checkbox"></span>
-                    <span class="label">Галерея</span>
-                  </label>
-                </li>
-                <li>
-                  <label class="check option">
-                    <input class="input-checkbox" type="checkbox" value="basket" name="features">
-                    <span class="checkbox"></span>
-                    <span class="label">Корзина</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <button class="button button-submit-filters" type="submit">
-              Показать
-            </button>
-          </form>
+              </fieldset>
+              <fieldset class="filters-grid">
+                <legend class="filter-legend">Сетка:</legend>
+                <ul class="grids-list">
+                  <li>
+                    <label class="radio option">
+                      <input class="input-radio" type="radio" checked="checked" value="adaptive" name="grid">
+                      <span class="radiobutton"></span>
+                      <span class="label">Адаптивная</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="radio option">
+                      <input class="input-radio" type="radio" value="fixed" name="grid">
+                      <span class="radiobutton"></span>
+                      <span class="label">Фиксированная</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="radio option">
+                      <input class="input-radio" type="radio" value="fluid" name="grid">
+                      <span class="radiobutton"></span>
+                      <span class="label">Резиновая</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="filters-features">
+                <legend class="filter-legend">Особенности:</legend>
+                <ul class="features-list">
+                  <li>
+                    <label class="check option">
+                      <input class="input-checkbox" type="checkbox" checked="checked" value="slider" name="features">
+                      <span class="checkbox"></span>
+                      <span class="label">Слайдер</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="check option">
+                      <input class="input-checkbox" type="checkbox" value="advantages" name="features">
+                      <span class="checkbox"></span>
+                      <span class="label">Блок преимуществ</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="check option">
+                      <input class="input-checkbox" type="checkbox" checked="checked" value="news" name="features">
+                      <span class="checkbox"></span>
+                      <span class="label">Новости</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="check option">
+                      <input class="input-checkbox" type="checkbox" value="gallery" name="features">
+                      <span class="checkbox"></span>
+                      <span class="label">Галерея</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="check option">
+                      <input class="input-checkbox" type="checkbox" value="basket" name="features">
+                      <span class="checkbox"></span>
+                      <span class="label">Корзина</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <button class="button button-submit-filters" type="submit">
+                Показать
+              </button>
+            </form>
         </section>
         <section class="catalog-sort">
           <h2 class="visually-hidden">Каталог шаблонов</h2>
@@ -308,11 +309,12 @@
       <div class="map">
         <iframe class="map-frame"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533248!2d30.320858716129496!3d59.93871648187619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1615253965560!5m2!1sru!2sru"
-          width="100%" height="416" allowfullscreen loading="lazy"
+          width="1440" height="416" allowfullscreen loading="lazy"
           title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
-        <img class="map-img" src="img/map.jpg" width="100%" height="416"
+        <img class="map-img" src="img/map.jpg" width="1440" height="416"
           alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" />
-        <img class="map-marker" src="img/map-marker.png" width="231" height="190" />
+        <img class="map-marker" src="img/map-marker.png" width="231" height="190"
+          alt="Указатель местонахождения студии" />
         <div class="container">
           <div class="about-us">
             <h3 class="our-title">nërds design studio</h3>
@@ -324,8 +326,6 @@
               нам</a>
           </div>
         </div>
-      </div>
-      </div>
       </div>
     </section>
     <section class="modal">
@@ -345,7 +345,7 @@
                 <input class="modal-input name" type="text" id="name" name="name" placeholder="Имя Фамилия" />
               </div>
               <div class="modal-input-group">
-                <label class="modal-label" for="name">Ваш e-mail:</label>
+                <label class="modal-label" for="email">Ваш e-mail:</label>
                 <input class="modal-input email" type="email" id="email" name="email" placeholder="email@example.com" />
               </div>
               <div class="modal-textarea-group">
