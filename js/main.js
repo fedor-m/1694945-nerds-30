@@ -33,7 +33,8 @@ try {
   isStorageSupport = false;
 }
 /*Действия по нажатию кнопок открытия-закрытия модального окна*/
-button_open.addEventListener("click", function () {
+button_open.addEventListener("click", function (e) {
+  e.preventDefault();
   modal.classList.add("opened");
   if (storage) {
     name.value = storage.name;
