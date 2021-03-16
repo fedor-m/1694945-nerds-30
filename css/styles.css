@@ -982,7 +982,7 @@ img {
 
 .template-header {
   margin: 27px auto 12px;
-  color: var(--basic-green);
+  color: var(--basic-black);
 }
 
 .template-header-link {
@@ -1010,7 +1010,7 @@ img {
 }
 
 .template-description {
-  color: var(--basic-green);
+  color: var(--basic-grey-description);
   line-height: 18px;
   margin: 0 0 33px;
 }
