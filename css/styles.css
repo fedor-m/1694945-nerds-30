@@ -1246,6 +1246,7 @@ img {
   color: var(--basic-black-social);
   line-height: 18px;
   font: inherit;
+  padding-left: 13px;
 }
 
 .modal-textarea-group {
@@ -1262,6 +1263,8 @@ img {
   font: inherit;
   line-height: 18px;
   resize: vertical;
+  padding-left: 15px;
+  padding-top: 13px;
 }
 
 .modal-input:hover, .modal-textarea:hover {
