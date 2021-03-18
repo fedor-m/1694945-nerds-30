@@ -475,8 +475,12 @@ img {
 
 .credo .container {
   display: grid;
-  grid-template-columns: 651px 1fr;
+  grid-template-columns: 651px 360px;
   column-gap: 149px;
+}
+
+.credo-principles {
+  width: 651px;
 }
 
 .credo-orders {
@@ -524,13 +528,16 @@ img {
   margin-bottom: 40px;
 }
 
+.indicators {
+  width: 360px;
+}
+
 .indicators-header {
   font-size: 16px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  max-width: 358px;
-  margin: 29px 0 10px 3px;
+  margin: 30px auto 9px 3px;
 }
 
 .nerds-illustration {
@@ -545,10 +552,9 @@ img {
   margin: 0;
   list-style: none;
   padding: 0;
-  display: flex;
-  width: 391px;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 98px);
+  column-gap: 22px;
 }
 
 .indicators-accents {
@@ -566,9 +572,6 @@ img {
   font-size: 26px;
   font-weight: 700;
   line-height: 40px;
-  position: relative;
-  bottom: 10px;
-  right: 4px;
 }
 
 .indicator-caption {
