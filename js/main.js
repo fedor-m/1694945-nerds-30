@@ -11,7 +11,7 @@ let name = form.querySelector(".modal-input.name");
 let email = form.querySelector(".modal-input.email");
 let letter = form.querySelector(".modal-textarea.letter");
 /*Переключение слайдов*/
-function switch_slides(switcher, slide) {
+function switchSlides(switcher, slide) {
   switcher.addEventListener("click", function () {
     let chosenButton = document.querySelector(".advantage-switcher.chosen");
     let chosenSlide = document.querySelector(".advantage-item.chosen");
@@ -22,7 +22,7 @@ function switch_slides(switcher, slide) {
   });
 }
 for (let i = 0; i < switchers.length; i++) {
-  switch_slides(switchers[i], slides[i]);
+  switchSlides(switchers[i], slides[i]);
 }
 /*Проверка поддержки локального хранилища*/
 try {
