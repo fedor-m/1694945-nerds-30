@@ -1,10 +1,10 @@
 /*Объявление переменных*/
-const button_open = document.querySelector(".button-mail");
+const buttonOpen = document.querySelector(".button-mail");
 const switchers = document.querySelectorAll(".advantage-switcher");
 const slides = document.querySelectorAll(".advantage-item");
 const modal = document.querySelector(".modal");
 const form = modal.querySelector(".modal-form");
-const button_close = modal.querySelector(".modal-close");
+const buttonClose = modal.querySelector(".modal-close");
 let isStorageSupport = true;
 let storage = {};
 let name = form.querySelector(".modal-input.name");
@@ -33,7 +33,7 @@ try {
   isStorageSupport = false;
 }
 /*Действия по нажатию кнопок открытия-закрытия модального окна*/
-button_open.addEventListener("click", function (e) {
+buttonOpen.addEventListener("click", function (e) {
   e.preventDefault();
   modal.classList.add("opened");
   if (storage) {
@@ -44,7 +44,7 @@ button_open.addEventListener("click", function (e) {
     name.focus();
   }
 });
-button_close.addEventListener("click", function () {
+buttonClose.addEventListener("click", function () {
   modal.classList.remove("opened");
   modal.classList.remove("error");
 });
@@ -54,6 +54,7 @@ window.addEventListener("keydown", function (e) {
     modal.classList.remove("opened");
   }
 });
+/*Действия по нажатию кнопки «Отправить»*/
 form.addEventListener("submit", function (e) {
   if (!name.value.trim() || !email.value.trim() || !letter.value.trim()) {
     e.preventDefault();
