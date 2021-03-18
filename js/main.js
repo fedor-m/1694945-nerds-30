@@ -12,11 +12,11 @@ let email = form.querySelector(".modal-input.email");
 let letter = form.querySelector(".modal-textarea.letter");
 /*Переключение слайдов*/
 function switch_slides(switcher, slide) {
-  switcher.addEventListener('click', function () {
-    let chosen_button = document.querySelector(".advantage-switcher.chosen");
-    let chosen_slide = document.querySelector(".advantage-item.chosen");
-    chosen_button.classList.remove("chosen");
-    chosen_slide.classList.remove("chosen");
+  switcher.addEventListener("click", function () {
+    let chosenButton = document.querySelector(".advantage-switcher.chosen");
+    let chosenSlide = document.querySelector(".advantage-item.chosen");
+    chosenButton.classList.remove("chosen");
+    chosenSlide.classList.remove("chosen");
     this.classList.add("chosen");
     slide.classList.add("chosen");
   });
